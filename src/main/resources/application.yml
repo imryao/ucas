@@ -1,0 +1,10 @@
+server:
+  port: 8082
+logging:
+  file:
+    name: /var/log/ucas/info.log
+  pattern:
+    file: "%d{${LOG_DATEFORMAT_PATTERN:yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] [%X{requestId}] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+feign:
+  okhttp:
+    enabled: true
